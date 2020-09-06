@@ -60,6 +60,9 @@ ggplot(
     geom_line(colour = "#6E7677", size = 1)+
   theme_bw()+
   xlab("Year")+
-  ylab("Number of cases")
+  ylab("Number of cases")+ 
+  labs(title = "Reported Measles Cases",
+       subtitle = "2011-2020",
+       caption = "Data source: WHO surveillance")
 
 

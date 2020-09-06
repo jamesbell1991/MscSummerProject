@@ -55,5 +55,9 @@ ggplot()+
   theme_void()+
   coord_map()+ 
   scale_fill_gradient2(low = "#852D05", high = "#248505", mid = "white")+
-  labs(fill = "%")
+  labs(fill = "%")+ 
+  labs(title = "Percentage of children 12-23 months who had received Measles vaccination",
+       subtitle = "By state",
+       caption = "Data source: Nigeria DHS 2018")
+             
   
