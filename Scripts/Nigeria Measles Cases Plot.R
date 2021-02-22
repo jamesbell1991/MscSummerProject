@@ -52,17 +52,15 @@ surdata_NG<- subset(surdata, Country == "Nigeria")
 # Remove NA rows 
 surdata_NG <- surdata_NG[-c(117:120), ]
 
-# Plot
-ggplot(
+# Plot (Title: Reported Measles Cases in Nigeria, 2011-2020. Data source: WHO surveillance)
+plot <- ggplot(
   data = surdata_NG, 
   aes(x=label, 
       y=value))+
     geom_line(colour = "#6E7677", size = 1)+
   theme_bw()+
   xlab("Year")+
-  ylab("Number of cases")+ 
-  labs(title = "Reported Measles Cases",
-       subtitle = "2011-2020",
-       caption = "Data source: WHO surveillance")
+  ylab("Number of cases")
+ggsave(path = "output", filename = "Measles_cases.png", plot = plot, width = 297, height = 210, units = "mm")
 
 
